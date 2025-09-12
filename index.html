@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta para mi niña</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+      text-align: center;
+      padding: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    h1 {
+      color: #d63384;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.5em;
+      color: #444;
+      margin-bottom: 50px;
+    }
+    .final {
+      font-size: 2.5em;
+      color: red;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+    /* Floating hearts and flowers */
+    .float {
+      position: absolute;
+      font-size: 2em;
+      animation: floatUp 10s linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Para mi niña hermosa ❤️</h1>
+  <p>
+    Mi niña, mi reina, mi todo: <br><br>
+   
+    Hoy quiero abrirte mi corazón y escribirte lo que siento por ti. Te extraño muchísimo, más de lo que a veces puedo poner en palabras. Sé que no nos vemos tanto como quisiéramos porque estás esforzándote, dando todo de ti en lo que haces, y lejos de molestarme eso me llena de orgullo. Admiro tu fuerza, tu disciplina y tus ganas de salir adelante. Eres increíble, y cada día me siento más afortunado de tenerte en mi vida. <br><br>
+
+    Extraño esos momentos en que nos encontrábamos en las bancas, donde nos quedábamos conversando sin que nada más importara, solo tú y yo, como si el mundo se detuviera para darnos un espacio. Extraño también ver películas contigo, abrazarte y sentir que todo era perfecto en ese instante, porque la felicidad estaba justo ahí: a tu lado. <br><br>
+
+    Sueño con un futuro a tu lado, donde podamos compartir muchos más momentos así, viajes, risas, abrazos interminables y hasta esos silencios que dicen más que mil palabras. Quiero estar ahí para ti siempre, no solo en las buenas, sino también en las malas, porque de eso se trata el amor verdadero: caminar juntos sin importar cuán difícil sea el camino. <br><br>
+
+    Sé que a veces, por estar ocupado, no te doy toda la atención que necesitas, y eso me duele, porque sé que mereces lo mejor de mí. Perdóname por los momentos malos que te hice pasar; no hay día que no me arrepienta de eso. Solo quiero que sepas que eres mi niña, mi reina, mi todo, lo más bonito que me ha pasado. No hay nada que me haga más feliz que pensar en ti y en lo que construimos juntos. <br><br>
+
+    El 12 de septiembre del 2025 cumplimos un año de relación, y aunque el tiempo pasa volando, cada instante a tu lado ha sido único. Me haces sentir completo, me haces sentir amado, y sobre todo me haces sentir que vale la pena soñar con un “para siempre”. <br><br>
+
+    Eres mi amor, la persona con la que quiero despertar cada mañana y con la que quiero cerrar mis ojos cada noche. Y pase lo que pase, siempre quiero que tengas la certeza de que aquí estaré, amándote con todo lo que soy. <br><br>
+
+    Te amo con todo mi corazón, hoy y siempre. 💕 <br><br>
+    Gracias por ser parte de mi vida.
+  </p>
+
+  <div class="final">✨💖 TE AMO CELESTE 💖✨</div>
+
+  <script>
+    const symbols = ["❤️","💖","💘","💐","🌸","🌹","🌺","💕"];
+    for (let i = 0; i < 30; i++) {
+      let span = document.createElement("span");
+      span.className = "float";
+      span.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+      span.style.left = Math.random() * 100 + "vw";
+      span.style.animationDuration = (5 + Math.random() * 5) + "s";
+      span.style.fontSize = (20 + Math.random() * 30) + "px";
+      document.body.appendChild(span);
+    }
+  </script>
+</body>
+</html>
