@@ -2,108 +2,95 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Para mi niña hermosa ❤️</title>
+  <title>Para Mi Niña Hermosa ❤️</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: pink;
+      background: #ffe6eb;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       overflow-x: hidden;
     }
 
     .carta {
       max-width: 800px;
       margin: 50px auto;
-      background: white;
       padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
-      text-align: justify;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
       line-height: 1.8;
       font-size: 18px;
       position: relative;
       z-index: 2;
     }
 
-    h1 {
+    h2 {
       text-align: center;
-      color: red;
+      color: #e60073;
     }
 
-    .btn {
-      display: block;
-      margin: 40px auto 0;
-      padding: 15px 40px;
-      font-size: 20px;
-      background: red;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: darkred;
-    }
-
-    /* Corazones flotando */
-    .corazon {
+    /* Corazones flotantes */
+    .corazon-flotante {
       position: fixed;
+      bottom: -20px;
       color: red;
       font-size: 24px;
-      animation: flotar 6s linear infinite;
+      animation: subir 6s linear forwards;
       z-index: 1;
     }
 
-    @keyframes flotar {
-      0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
-      100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
-    }
-
-    /* Final con corazones */
-    #final {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: pink;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 2s ease;
-      z-index: 10;
-    }
-
-    #final h1 {
-      font-size: 60px;
-      color: red;
-      text-shadow: 2px 2px 10px black;
-      animation: latir 1s infinite;
-    }
-
-    @keyframes latir {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
-
-    .corazon-final {
-      position: absolute;
-      font-size: 30px;
-      color: red;
-      animation: subir 5s linear infinite;
-    }
-
     @keyframes subir {
-      0% { bottom: -10%; opacity: 1; }
-      100% { bottom: 100%; opacity: 0; }
+      from { transform: translateY(0) scale(1); opacity: 1; }
+      to { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+    }
+
+    /* Botón corazón */
+    .btn-corazon {
+      display: block;
+      margin: 30px auto;
+      background: red;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      animation: latido 1s infinite;
+    }
+
+    @keyframes latido {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    /* Corazones finales */
+    .corazon-final {
+      position: fixed;
+      bottom: -20px;
+      color: red;
+      font-size: 30px;
+      animation: subir 6s linear forwards;
+      z-index: 3;
+    }
+
+    /* Mensaje final */
+    .mensaje-final {
+      display: none;
+      position: fixed;
+      bottom: -100px;
+      width: 100%;
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+      color: #e60073;
+      animation: subirMensaje 3s ease forwards;
+      z-index: 4;
+    }
+
+    @keyframes subirMensaje {
+      from { bottom: -100px; opacity: 0; }
+      to { bottom: 40%; opacity: 1; }
     }
   </style>
 </head>
@@ -111,97 +98,108 @@
 
   <!-- Carta -->
   <div class="carta">
-    <h1>Para mi niña hermosa ❤️</h1>
+    <h2>Para mi niña hermosa ❤️</h2>
     <p>
-      Mi niña, mi reina, mi todo: Hoy quiero abrirte mi corazón y dejar que en estas palabras fluya todo lo que siento por ti.  
-      Te extraño de una manera que duele, con esa nostalgia que se instala en el pecho y no me suelta.  
-      A veces me descubro pensando en ti en los momentos más simples, y es como si el tiempo se detuviera para recordarme cuánto me haces falta.  
+      Mi niña, mi reina, mi todo:<br><br>
+      Hoy quiero abrirte mi corazón y dejar que en estas palabras fluya todo lo que siento por ti. 
+      Te extraño de una manera que duele, con esa nostalgia que se instala en el pecho y no me suelta. 
+      A veces me descubro pensando en ti en los momentos más simples, y es como si el tiempo se detuviera 
+      para recordarme cuánto me haces falta.<br><br>
 
-      Extraño estar a tu lado porque eres tú quien me da tranquilidad, quien trae paz a mi vida y quien me llena de ánimos cuando todo parece difícil.  
-      Tu sola presencia me calma, me completa y me hace sentir que todo tiene sentido.  
+      Extraño estar a tu lado porque eres tú quien me da tranquilidad, quien trae paz a mi vida y quien me 
+      llena de ánimos cuando todo parece difícil. Tu sola presencia me calma, me completa y me hace sentir 
+      que todo tiene sentido. No hay nada que desee más que tenerte cerca, abrazarte y volver a sentir ese 
+      refugio que solo tú sabes darme.<br><br>
 
-      No hay nada que desee más que tenerte cerca, abrazarte y volver a sentir ese refugio que solo tú sabes darme.  
-      Extraño con el alma esos ratos en las bancas, cuando conversar contigo hacía que el mundo desapareciera y solo quedáramos tú y yo, sin nada más que interrumpiera nuestra burbuja.  
+      Extraño con el alma esos ratos en las bancas, cuando conversar contigo hacía que el mundo desapareciera 
+      y solo quedáramos tú y yo, sin nada más que interrumpiera nuestra burbuja. Extraño nuestras películas, 
+      tu calor en mis brazos, esa sensación de paz y plenitud que me hacías sentir… como si la felicidad se 
+      resumiera en mirarte y saber que estabas conmigo.<br><br>
 
-      Extraño nuestras películas, tu calor en mis brazos, esa sensación de paz y plenitud que me hacías sentir… como si la felicidad se resumiera en mirarte y saber que estabas conmigo.  
+      Sueño con todo lo que vendrá: viajes, risas, abrazos interminables y esos silencios que no necesitan 
+      palabras porque ya lo dicen todo. Quiero estar contigo en cada paso, en las alegrías y en las tormentas, 
+      porque para mí el verdadero amor no se trata de lo fácil, sino de caminar juntos incluso cuando el camino 
+      se vuelva duro.<br><br>
 
-      Sueño con todo lo que vendrá: viajes, risas, abrazos interminables y esos silencios que no necesitan palabras porque ya lo dicen todo.  
-      Quiero estar contigo en cada paso, en las alegrías y en las tormentas, porque para mí el verdadero amor no se trata de lo fácil, sino de caminar juntos incluso cuando el camino se vuelva duro.  
+      Sé que no siempre te doy la atención que mereces, y créeme que eso me duele, porque tú mereces lo mejor 
+      de mí. Perdóname por las veces en que fallé, por los momentos en los que no estuve como debí. No hay día 
+      en que no piense en mejorar, en ser la persona que mereces tener a tu lado. Eres lo más bonito que me ha 
+      pasado en esta vida, y nada me hace más feliz que saber que lo nuestro sigue creciendo a pesar de todo.<br><br>
 
-      Sé que no siempre te doy la atención que mereces, y créeme que eso me duele, porque tú mereces lo mejor de mí.  
-      Perdóname por las veces en que fallé, por los momentos en los que no estuve como debí.  
-      No hay día en que no piense en mejorar, en ser la persona que mereces tener a tu lado.  
+      Este 12 de septiembre del 2025 cumplimos un año de relación… y aunque el tiempo ha volado, cada instante 
+      contigo ha sido eterno en mi corazón. Un año contigo me ha enseñado lo que es amar de verdad, me ha hecho 
+      sentir completo, amado y con la certeza de que soñar con un “para siempre” es posible contigo.<br><br>
 
-      Eres lo más bonito que me ha pasado en esta vida, y nada me hace más feliz que saber que lo nuestro sigue creciendo a pesar de todo.  
-
-      Este 19 de septiembre del 2025 cumplimos un año de relación… y aunque el tiempo ha volado, cada instante contigo ha sido eterno en mi corazón.  
-      Un año contigo me ha enseñado lo que es amar de verdad, me ha hecho sentir completo, amado y con la certeza de que soñar con un “para siempre” es posible contigo.  
-
-      Eres mi amor, la mujer con la que quiero despertar cada mañana y con la que quiero cerrar los ojos cada noche.  
-      Y pase lo que pase, quiero que tengas siempre esta certeza: aquí estoy, aquí estaré, amándote con todo lo que soy, con todo lo que fui y con todo lo que seré.
+      Eres mi amor, la mujer con la que quiero despertar cada mañana y con la que quiero cerrar los ojos cada 
+      noche. Y pase lo que pase, quiero que tengas siempre esta certeza: aquí estoy, aquí estaré, amándote con 
+      todo lo que soy, con todo lo que fui y con todo lo que seré.
     </p>
 
-    <button class="btn" onclick="reproducirAudio()">❤️ Presióname ❤️</button>
+    <!-- Botón corazón -->
+    <button class="btn-corazon" id="btn-audio">❤️ Presióname ❤️</button>
   </div>
 
   <!-- Música de fondo -->
-  <audio id="musica" src="mi-cancion.mp3.mp3" autoplay loop></audio>
+  <audio id="musica" loop>
+    <source src="mi-cancion.mp3" type="audio/mp3">
+  </audio>
 
-  <!-- Audio personal -->
-  <audio id="miAudio" src="mi-audio.mp3.mp3"></audio>
+  <!-- Tu audio personal -->
+  <audio id="miAudio">
+    <source src="mi-audio.mp3" type="audio/mp3">
+  </audio>
 
-  <!-- Final -->
-  <div id="final">
-    <h1>TE AMO CELESTE</h1>
-  </div>
+  <!-- Corazones y mensaje final -->
+  <div id="corazones-final"></div>
+  <div class="mensaje-final" id="mensaje-final">TE AMO CELESTE</div>
 
   <script>
     const musica = document.getElementById("musica");
     const miAudio = document.getElementById("miAudio");
-    const final = document.getElementById("final");
+    const btnAudio = document.getElementById("btn-audio");
+    const corazonesFinal = document.getElementById("corazones-final");
+    const mensajeFinal = document.getElementById("mensaje-final");
 
-    // Empezar música desde el segundo 17
-    musica.addEventListener("loadedmetadata", () => {
-      musica.currentTime = 17;
-      musica.play().catch(() => {});
+    // Iniciar música después de interacción
+    document.addEventListener("click", iniciarMusica, { once: true });
+    document.addEventListener("touchstart", iniciarMusica, { once: true });
+
+    function iniciarMusica() {
+      musica.currentTime = 17; // Empieza en el segundo 17
+      musica.play().catch(e => console.log("Autoplay bloqueado:", e));
+    }
+
+    // Botón reproducir tu audio
+    function reproducirAudio() {
+      musica.pause();   // Pausa música
+      miAudio.play();   // Reproduce tu audio
+    }
+    btnAudio.addEventListener("click", reproducirAudio);
+
+    // Al terminar tu audio → corazones y mensaje
+    miAudio.addEventListener("ended", () => {
+      for (let i = 0; i < 30; i++) {
+        setTimeout(() => {
+          const corazon = document.createElement("div");
+          corazon.classList.add("corazon-final");
+          corazon.textContent = "❤️";
+          corazon.style.left = Math.random() * window.innerWidth + "px";
+          document.body.appendChild(corazon);
+          setTimeout(() => corazon.remove(), 6000);
+        }, i * 200);
+      }
+      mensajeFinal.style.display = "block";
     });
 
-    // Corazones flotando en todo momento
-    function crearCorazon() {
+    // Corazones flotantes mientras lee la carta
+    setInterval(() => {
       const corazon = document.createElement("div");
-      corazon.classList.add("corazon");
-      corazon.innerHTML = "❤️";
-      corazon.style.left = Math.random() * 100 + "vw";
-      corazon.style.fontSize = Math.random() * 20 + 20 + "px";
-      corazon.style.animationDuration = Math.random() * 3 + 3 + "s";
+      corazon.classList.add("corazon-flotante");
+      corazon.textContent = "❤️";
+      corazon.style.left = Math.random() * window.innerWidth + "px";
       document.body.appendChild(corazon);
       setTimeout(() => corazon.remove(), 6000);
-    }
-    setInterval(crearCorazon, 800);
-
-    // Al presionar botón
-    function reproducirAudio() {
-      musica.pause();
-      miAudio.play();
-    }
-
-    // Cuando termina tu audio
-    miAudio.addEventListener("ended", () => {
-      final.style.visibility = "visible";
-      final.style.opacity = "1";
-
-      // corazones del final
-      setInterval(() => {
-        const corazon = document.createElement("div");
-        corazon.classList.add("corazon-final");
-        corazon.innerHTML = "❤️";
-        corazon.style.left = Math.random() * 100 + "vw";
-        corazon.style.bottom = "0";
-        corazon.style.fontSize = Math.random() * 30 + 20 + "px";
-        document.getElementById("final").appendChild(corazon);
-        setTimeout(() => corazon.remove(), 5000);
-      }, 300);
-    });
+    }, 1000);
   </script>
 </body>
 </html>
