@@ -2,76 +2,194 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carta para mi niña</title>
+  <title>Carta para mi amor ❤️</title>
   <style>
     body {
-       font-family: 'Georgia', serif;
-  background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
-  text-align: center;
-  padding: 40px;
-  position: relative;
-  overflow-x: hidden;  /* oculta el scroll horizontal */
-  overflow-y: scroll;  /* fuerza scroll vertical en celular */
-  -webkit-overflow-scrolling: touch; /* suaviza scroll en iOS/Android */
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
     }
-    h1 {
-      color: #d63384;
-      font-size: 3em;
-      margin-bottom: 20px;
+
+    .portada {
+      position: relative;
+      width: 320px;
+      height: 240px;
+      cursor: pointer;
     }
-    p {
-      font-size: 1.5em;
-      color: #444;
-      margin-bottom: 50px;
+
+    .sobre {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #ff4d6d;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 1;
     }
-    .final {
-      font-size: 2.5em;
-      color: red;
-      font-weight: bold;
-      margin-top: 50px;
+
+    .solapa {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: #e63950;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transform-origin: top;
+      transition: transform 1s;
+      z-index: 2;
     }
-    /* Floating hearts and flowers */
+
+    .carta {
+      display: none;
+      background: white;
+      width: 90%;
+      max-width: 600px;
+      height: 80%;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      overflow-y: auto;
+      z-index: 3;
+      position: relative;
+    }
+
+    .carta h1 {
+      text-align: center;
+      color: #e63950;
+    }
+
+    .carta p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    /* corazones flotantes */
     .float {
       position: absolute;
-      font-size: 2em;
-      animation: floatUp 10s linear infinite;
-      opacity: 0.8;
+      animation: flotar linear infinite;
+      color: red;
+      user-select: none;
+      z-index: 0;
     }
-    @keyframes floatUp {
-      0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
-      50% { opacity: 1; }
-      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+
+    @keyframes flotar {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Botón corazón */
+    .btn-corazon {
+      display: block;
+      margin: 20px auto;
+      padding: 15px 30px;
+      background: red;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .btn-corazon:hover {
+      transform: scale(1.1);
+      background: #cc0000;
+    }
+
+    /* Texto final TE AMO */
+    .final {
+      position: fixed;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 3em;
+      font-weight: bold;
+      color: #e63950;
+      opacity: 0;
+      animation: subir 3s forwards;
+      z-index: 1000;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    @keyframes subir {
+      0% {
+        top: 100%;
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        top: 40%;
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Para mi niña hermosa ❤️</h1>
-  <p>
-    Mi niña, mi reina, mi todo: <br><br>
-   <p>Hoy quiero abrirte mi corazón y escribirte lo que siento por ti. Te extraño muchísimo, más de lo que a veces puedo poner en palabras. Sé que no nos vemos tanto como quisiéramos porque estás esforzándote, dando todo de ti en lo que haces, y lejos de molestarme eso me llena de orgullo. Admiro tu fuerza, tu disciplina y tus ganas de salir adelante. Eres increíble, y cada día me siento más afortunado de tenerte en mi vida.</p>
-      <p>Extraño esos momentos en que nos encontrábamos en las bancas, donde nos quedábamos conversando sin que nada más importara, solo tú y yo, como si el mundo se detuviera para darnos un espacio. Extraño también ver películas contigo, abrazarte y sentir que todo era perfecto en ese instante, porque la felicidad estaba justo ahí: a tu lado.</p>
-      <p>Sueño con un futuro a tu lado, donde podamos compartir muchos más momentos así, viajes, risas, abrazos interminables y hasta esos silencios que dicen más que mil palabras. Quiero estar ahí para ti siempre, no solo en las buenas, sino también en las malas, porque de eso se trata el amor verdadero: caminar juntos sin importar cuán difícil sea el camino.</p>
-      <p>Sé que a veces, por estar ocupado, no te doy toda la atención que necesitas, y eso me duele, porque sé que mereces lo mejor de mí. Perdóname por los momentos malos que te hice pasar; no hay día que no me arrepienta de eso. Solo quiero que sepas que eres mi niña, mi reina, mi todo, lo más bonito que me ha pasado. No hay nada que me haga más feliz que pensar en ti y en lo que construimos juntos.</p>
-      <p><strong>El 12 de septiembre del 2025 cumplimos un año de relación</strong>, y aunque el tiempo pasa volando, cada instante a tu lado ha sido único. Me haces sentir completo, me haces sentir amado, y sobre todo me haces sentir que vale la pena soñar con un “para siempre”.</p>
-      <p>Eres mi amor, la persona con la que quiero despertar cada mañana y con la que quiero cerrar mis ojos cada noche. Y pase lo que pase, siempre quiero que tengas la certeza de que aquí estaré, amándote con todo lo que soy.</p>
-      <p style="font-size:1.12em; color:#d63384; text-align:center;"><strong>Te amo con todo mi corazón, hoy y siempre. ❤️</strong></p> <br><br>
-    Gracias por ser parte de mi vida.
-  </p>
+  <div class="portada" id="portada">
+    <div class="sobre"></div>
+    <div class="solapa" id="solapa"></div>
+  </div>
 
-  <div class="final">✨💖 TE AMO CELESTE 💖✨</div>
+  <div class="carta" id="carta">
+    <h1>Para mi niña hermosa ❤️</h1>
+    <p>
+      Mi niña, mi reina, mi todo:
+    </p>
+    <p>
+      Hoy quiero abrirte mi corazón y dejar que en estas palabras fluya todo lo que siento por ti. Te extraño de una manera que duele, con esa nostalgia que se instala en el pecho y no me suelta. A veces me descubro pensando en ti en los momentos más simples, y es como si el tiempo se detuviera para recordarme cuánto me haces falta.
+    </p>
+    <p>
+      Extraño estar a tu lado porque eres tú quien me da tranquilidad, quien trae paz a mi vida y quien me llena de ánimos cuando todo parece difícil. Tu sola presencia me calma, me completa y me hace sentir que todo tiene sentido. No hay nada que desee más que tenerte cerca, abrazarte y volver a sentir ese refugio que solo tú sabes darme.
+    </p>
+    <p>
+      Extraño con el alma esos ratos en las bancas, cuando conversar contigo hacía que el mundo desapareciera y solo quedáramos tú y yo, sin nada más que interrumpiera nuestra burbuja. Extraño nuestras películas, tu calor en mis brazos, esa sensación de paz y plenitud que me hacías sentir… como si la felicidad se resumiera en mirarte y saber que estabas conmigo.
+    </p>
+    <p>
+      Sueño con todo lo que vendrá: viajes, risas, abrazos interminables y esos silencios que no necesitan palabras porque ya lo dicen todo. Quiero estar contigo en cada paso, en las alegrías y en las tormentas, porque para mí el verdadero amor no se trata de lo fácil, sino de caminar juntos incluso cuando el camino se vuelva duro.
+    </p>
+    <p>
+      Sé que no siempre te doy la atención que mereces, y créeme que eso me duele, porque tú mereces lo mejor de mí. Perdóname por las veces en que fallé, por los momentos en los que no estuve como debí. No hay día en que no piense en mejorar, en ser la persona que mereces tener a tu lado. Eres lo más bonito que me ha pasado en esta vida, y nada me hace más feliz que saber que lo nuestro sigue creciendo a pesar de todo.
+    </p>
+    <p>
+      Este 12 de septiembre del 2025 cumplimos un año de relación… y aunque el tiempo ha volado, cada instante contigo ha sido eterno en mi corazón. Un año contigo me ha enseñado lo que es amar de verdad, me ha hecho sentir completo, amado y con la certeza de que soñar con un “para siempre” es posible contigo.
+    </p>
+    <p>
+      Eres mi amor, la mujer con la que quiero despertar cada mañana y con la que quiero cerrar los ojos cada noche. Y pase lo que pase, quiero que tengas siempre esta certeza: aquí estoy, aquí estaré, amándote con todo lo que soy, con todo lo que fui y con todo lo que seré.
+    </p>
+
+    <!-- Botón de corazón -->
+    <button class="btn-corazon" id="btnCorazon">❤️ Presióname ❤️</button>
+  </div>
+
+  <!-- 🎶 Música de fondo -->
+  <audio id="musica" autoplay loop>
+    <source src="mi-cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- 🎤 Audio personal -->
+  <audio id="audioPersonal">
+    <source src="mi-audio.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
 
   <script>
-    const symbols = ["❤️","💖","💘","💐","🌸","🌹","🌺","💕"];
-    for (let i = 0; i < 30; i++) {
-      let span = document.createElement("span");
-      span.className = "float";
-      span.innerText = symbols[Math.floor(Math.random() * symbols.length)];
-      span.style.left = Math.random() * 100 + "vw";
-      span.style.animationDuration = (5 + Math.random() * 5) + "s";
-      span.style.fontSize = (20 + Math.random() * 30) + "px";
-      document.body.appendChild(span);
-    }
-  </script>
-</body>
-</html>
+    const portada = document.getElementById("portada");
+    const solapa = document.getElementById("solapa");
+    const carta = document.getElementByI
